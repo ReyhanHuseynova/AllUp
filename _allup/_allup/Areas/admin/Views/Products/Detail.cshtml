@@ -1,0 +1,16 @@
+﻿@model Product
+<div class="row">
+    <div class="col-12">
+        <h1>@Model.Name</h1>
+        <h1>@Model.Price</h1>
+        <h1>@Model.Rate</h1>
+        <h1>@Model.Brand.Name</h1>
+        <h1>@Model.ProductDetails.Tax</h1>
+        <h1>
+            @foreach (ProductTag item in Model.ProductTags)
+            {
+                <div>@item.Tag.Name</div>
+            }
+        </h1>
+    </div>
+</div>

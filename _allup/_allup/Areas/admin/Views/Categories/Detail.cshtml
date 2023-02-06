@@ -1,0 +1,23 @@
+﻿@model Category
+<div class="row">
+    <div class=" col-12">
+        <h1>@Model.Name</h1>
+        @if (Model.IsMain)
+        {
+            <h2>
+            @foreach (Category item in Model.Children)
+            {
+                <div>@item.Name </div>
+            }
+            </h2>
+           
+        }
+        else
+        {
+            @Model.Parent.Name
+        }
+
+           
+       
+    </div>
+</div>
